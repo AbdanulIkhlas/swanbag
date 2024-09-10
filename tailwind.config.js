@@ -25,6 +25,11 @@ export default {
 
         'lg': '1440px',
         
+      },
+      borderRadius: {
+        large:"52px",
+        large2: "62px",
+        extraLarge: "82px",
       }
     },
   },
