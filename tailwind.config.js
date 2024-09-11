@@ -5,9 +5,9 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    // fontFamily: {
-    //   'sans': ['Poppins', 'sans-serif']
-    // },
+    fontFamily: {
+      'sans': ['Poppins', 'sans-serif']
+    },
     extend: {
       textShadow: {
         sm: '1px 1px 2px rgba(0, 0, 0, 0.5)',
