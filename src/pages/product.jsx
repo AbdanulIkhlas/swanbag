@@ -6,12 +6,14 @@ import { productsAdvantages } from "../utils/productsAdvantages";
 import products from "../utils/products";
 import CardProducts from "../components/Fragments/CardProducts";
 import Pagination from "../components/Fragments/Pagination";
+import { testimoni } from "../utils/testimoni";
+import Caraousel from "../components/Fragments/Caraousel";
 
 const Product = () => {
   return (
     <>
       <Navbar></Navbar>
-      <div className="flex flex-col Poppins pb-[500px]">
+      <div className="flex flex-col font-Poppins pb-[500px]">
         {/* SECTION 1 : TENTANG PRODUK */}
         <section className="relative flex flex-col mt-[50px] md:mt-[70px] md:h-[300px]">
           <div className="md:flex md:px-20 md:w-full md:justify-between">
@@ -77,7 +79,7 @@ const Product = () => {
         </section>
 
         {/* SECTION 3 : SWANBAG PRODUK */}
-        <section className="relative border border-black">
+        <section className="relative">
           <img
             src="images/beranda-bg4.png"
             alt="bg pink"
@@ -89,13 +91,25 @@ const Product = () => {
             className="absolute hidden w-full top-0 -z-10 md:block"
           />
           <div className="px-5 pb-6">
-            <div className="py-7"><SectionHeader content={["SWANBAG", "PRODUK"]} /></div>
+            <div className="py-7">
+              <SectionHeader content={["SWANBAG", "PRODUK"]} />
+            </div>
             <Pagination data={products} CardComponent={CardProducts} />
           </div>
         </section>
         {/* SECTION 4 : TESTIMONI */}
-        <section>
-          <h1>Section 1</h1>
+        <section className="bg-[#e645140a] pb-12">
+          <div className="px-5">
+            <div className="py-7 mb-4">
+              <SectionHeader content={["TESTIMONI", "PELANGGAN"]} />
+            </div>
+          </div>
+          <Caraousel
+            data={testimoni}
+            srcLeftButtonPath="svg/arrow-left.svg"
+            srcRightButtonPath="svg/arrow-right.svg"
+            chooseFragment="testimoni"
+          />
         </section>
       </div>
     </>
