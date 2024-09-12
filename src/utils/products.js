@@ -19,7 +19,7 @@ const products = [
   },
   {
     id: 4,
-    name: "Tas Ecobag Parasut",
+    name: "Mini Pouch",
     price: 49999,
     image: "images/products/bag-4.png",
   },
@@ -121,7 +121,7 @@ const products = [
   },
   {
     id: 21,
-    name: "Tas Ecobag Parasut",
+    name: "Box Packaging",
     price: 49999,
     image: "images/products/bag-21.png",
   },
