@@ -73,7 +73,7 @@ const Product = () => {
           </div>
         </section>
         {/* SECTION 3 : SWANBAG PRODUK */}
-        <section>
+        <section className="">
           <h1>Section 1</h1>
         </section>
         {/* SECTION 4 : TESTIMONI */}
