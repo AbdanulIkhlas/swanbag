@@ -3,6 +3,9 @@ import CardProducts from "../components/Fragments/CardProducts";
 import Navbar from "../components/Fragments/Navbar";
 import TeamImageCarousel from "../components/Fragments/TeamImageCarousel";
 import products from "../utils/products";
+import Footer from "../components/Fragments/Footer";
+import { testimoni } from "../utils/testimoni";
+import Caraousel from "../components/Fragments/Caraousel";
 
 const images = [
   { id: 1, src: "images/teams/team-1.png", alt: "Image 1" },
@@ -13,7 +16,7 @@ const images = [
 const Home = () => {
   // const [productsList, setProductsList] = useState(products);
   return (
-    <>
+    <div className="flex flex-col font-poppins min-h-screen">
       <Navbar></Navbar>
       <section className="relative flex flex-col justify-center items-center mt-14 md:0 overflow-hidden md:flex-row md:justify-between md:pl-[134px]">
         <div className="flex flex-col justify-center items-center md:w-[567px] ">
@@ -123,7 +126,7 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <section className="pb-44 ">
+      <section className="pb-8">
         <div className="px-5 pt-8 md:pt-[130px] md:pl-[135px] md:flex md:flex-row">
           <div className="md:w-[437px]">
             <SectionHeader content={["Tim ", "Kami"]} />
@@ -141,7 +144,22 @@ const Home = () => {
           </div>
         </div>
       </section>
-    </>
+      {/* SECTION 4 : TESTIMONI */}
+      <section className="bg-[#e645140a] pb-12">
+        <div className="px-5">
+          <div className="py-7 mb-4">
+            <SectionHeader content={["TESTIMONI", "PELANGGAN"]} />
+          </div>
+        </div>
+        <Caraousel
+          data={testimoni}
+          srcLeftButtonPath="svg/arrow-left.svg"
+          srcRightButtonPath="svg/arrow-right.svg"
+          chooseFragment="testimoni"
+        />
+      </section>
+      <Footer />
+    </div>
   );
 };
 
