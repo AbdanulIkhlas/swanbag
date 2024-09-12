@@ -12,7 +12,7 @@ const About = () => {
         <div className="mb-[30px] lg:mb-[35px]">
           <SectionHeader content={["Tujuan ", "Kami"]} />
           <TextParagraph customClassname="text-justify lg:mt-8">
-          Untuk menyediakan solusi belanja yang ramah lingkungan dan
+            Untuk menyediakan solusi belanja yang ramah lingkungan dan
             berkelanjutan, dengan mengurangi penggunaan kantong plastik sekali
             pakai. Selain itu, SwanBag bertujuan untuk menggabungkan keindahan
             budaya lokal melalui penggunaan perca batik Jambi, sekaligus
@@ -20,16 +20,18 @@ const About = () => {
             SwanBag juga ingin meningkatkan kesadaran masyarakat akan pentingnya
             menjaga lingkungan dan mengadopsi gaya hidup yang lebih hijau dan
             bertanggung jawab.
-              </TextParagraph>
+          </TextParagraph>
         </div>
         <SectionHeader content={["Dokumentasi ", "Kami"]} />
-        <div className="grid grid-cols-2 mt-[19px] lg:mt-[35px]">
-          <img
-            src="/images/teams/team-1.png"
-            alt=""
-            className="border border-black w-[134px] h-[184px] md:w-[242px] md:h-[338px] size1024:w-[400px] size1024:h-[500px]  lg:w-[494px] lg:h-[677px] mb-[35px]  rounded-tr-extraLarge rounded-bl-extraLarge object-center"
-          />
-          <div className="grid grid-rows-2 border border-black ">
+        <div className="flex gap-4 mt-[19px] lg:mt-[35px] md:gap-8">
+          <div className="lg:w-[50%] ">
+            <img
+              src="/images/teams/team-1.png"
+              alt=""
+              className=" w-[134px] h-[184px] md:w-[242px] md:h-[338px] size1024:w-[400px] size1024:h-[500px]  lg:w-full lg:h-[677px] mb-[35px]  rounded-tr-extraLarge rounded-bl-extraLarge object-center "
+            />
+          </div>
+          <div className="flex flex-col gap-[6px] md:gap-[34px] lg:w-[50%] size1024:gap-[12px] lg:gap-[34px]">
             <img
               src="/images/teams/team-2.png"
               alt=""
@@ -38,7 +40,7 @@ const About = () => {
             <img
               src="/images/teams/team-3.png"
               alt=""
-              className="w-[172px] h-[102px] object-center md:w-[311px] md:h-[171px] size1024:w-[460px] size1024:h-[310px] size1024:-mt-[75px]  lg:w-[635px] lg:h-[372px] rounded-br-large2 rounded-tl-large2  -mt-[28px] mr-[21px] md:-mt-[20px] lg:-mt-[50px]"
+              className="w-[172px] h-[102px] object-center md:w-full md:h-[171px] size1024:w-[460px] size1024:h-[310px]  lg:w-[635px] lg:h-[372px] rounded-br-large2 rounded-tl-large2   mr-[21px] "
             />
           </div>
         </div>

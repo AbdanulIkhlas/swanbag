@@ -25,14 +25,14 @@ const Footer = () => {
             <div className="flex gap-2 items-center lg:items-start">
               <img src="svg/wa-icon.svg" alt="wa" className="w-[24px]" />
               <div>
-                <p className="text-[12px] lg:text-[16px]">Whatsapp</p>
+                <p className="hidden lg:block text-[12px] lg:text-[16px]">Whatsapp</p>
                 <p className="text-[12px] lg:text-[16px]">0895-6208-15794</p>
               </div>
             </div>
             <div className="flex gap-2 items-center lg:items-start mt-1">
               <img src="svg/phone-icon.svg" alt="phone" className="w-[24px]" />
               <div>
-                <p className="text-[12px] lg:text-[16px]">Nomor Telepon</p>
+                <p className="hidden lg:block text-[12px] lg:text-[16px]">Nomor Telepon</p>
                 <p className="text-[12px] lg:text-[16px]">0895-6208-15794</p>
               </div>
             </div>

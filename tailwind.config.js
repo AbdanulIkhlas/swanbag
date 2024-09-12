@@ -22,8 +22,8 @@ export default {
         lg: "1440px",
       },
       borderRadius: {
-        large: "52px",
-        large2: "62px",
+        large: "53px",
+        large2: "66px",
         extraLarge: "82px",
       },
       boxShadow: {
