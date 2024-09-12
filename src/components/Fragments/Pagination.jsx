@@ -1,0 +1,70 @@
+import React, { useState, useEffect } from "react";
+
+const Pagination = ({ data, CardComponent }) => {
+  const [currentPage, setCurrentPage] = useState(1);
+  const [isFading, setIsFading] = useState(false);
+
+  // Menentukan jumlah item per halaman berdasarkan ukuran layar
+  const itemsPerPage = window.innerWidth < 768 ? 6 : 8;
+  const totalPages = Math.ceil(data.length / itemsPerPage);
+
+  // Fungsi untuk mengubah halaman dengan fade effect
+  const handleClick = (pageNumber) => {
+    if (pageNumber !== currentPage) {
+      setIsFading(true);
+      setTimeout(() => {
+        setCurrentPage(pageNumber);
+        setIsFading(false);
+      }, 300); // Durasi animasi fade sama dengan durasi transisi CSS
+    }
+  };
+
+  // Menentukan item yang akan ditampilkan pada halaman saat ini
+  const currentItems = data.slice(
+    (currentPage - 1) * itemsPerPage,
+    currentPage * itemsPerPage
+  );
+
+  return (
+    <div className="flex flex-col items-center">
+      {/* Render komponen kartu yang dinamis berdasarkan data */}
+      <div
+        className={`grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-x-6 gap-y-8 mb-6 transition-opacity duration-500 ${
+          isFading ? "opacity-0" : "opacity-100"
+        }`}
+      >
+        {currentItems.map((item) => (
+          <CardComponent key={item.id} data={item} />
+        ))}
+      </div>
+
+      {/* Pagination */}
+      <div className="flex rounded-lg shadow-customShadow border border-gray-100">
+        {Array.from({ length: totalPages }, (_, i) => i + 1).map(
+          (pageNumber, index) => (
+            <button
+              key={pageNumber}
+              onClick={() => handleClick(pageNumber)}
+              className={`px-3 py-1 ${
+                currentPage === pageNumber
+                  ? "bg-yellow-500 text-white"
+                  : "bg-white text-yellow-500"
+              } transition duration-500 ease-in-out 
+                ${
+                  index === 0 ? "rounded-l-lg px-[14px]" : ""
+                }  // Border-radius untuk tombol pertama
+                ${
+                  index === totalPages - 1 ? "rounded-r-lg" : ""
+                }  // Border-radius untuk tombol terakhir
+              `}
+            >
+              {pageNumber}
+            </button>
+          )
+        )}
+      </div>
+    </div>
+  );
+};
+
+export default Pagination;
