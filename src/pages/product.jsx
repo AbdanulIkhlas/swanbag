@@ -8,12 +8,13 @@ import CardProducts from "../components/Fragments/CardProducts";
 import Pagination from "../components/Fragments/Pagination";
 import { testimoni } from "../utils/testimoni";
 import Caraousel from "../components/Fragments/Caraousel";
+import Footer from "../components/Fragments/Footer";
 
 const Product = () => {
   return (
     <>
       <Navbar></Navbar>
-      <div className="flex flex-col font-Poppins pb-[500px]">
+      <div className="flex flex-col font-poppins min-h-screen">
         {/* SECTION 1 : TENTANG PRODUK */}
         <section className="relative flex flex-col mt-[50px] md:mt-[70px] md:h-[300px]">
           <div className="md:flex md:px-20 md:w-full md:justify-between">
@@ -111,6 +112,9 @@ const Product = () => {
             chooseFragment="testimoni"
           />
         </section>
+
+        {/* FOOTER */}
+        <Footer />
       </div>
     </>
   );
