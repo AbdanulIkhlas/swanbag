@@ -16,11 +16,11 @@ const Product = () => {
       <Navbar></Navbar>
       <div className="flex flex-col font-poppins min-h-screen">
         {/* SECTION 1 : TENTANG PRODUK */}
-        <section className="relative flex flex-col mt-[50px] md:mt-[70px] md:h-[300px]">
-          <div className="md:flex md:px-20 md:w-full md:justify-between">
-            <div className="px-5 md:px-0 md:w-[50%]">
-              <SectionHeader content={["TENTANG", "PRODUK"]} />
-              <TextParagraph customClassname="text-justify ">
+        <section className="relative flex flex-col mt-[50px] md:mt-[70px] md:h-[300px] size1024:h-[400px] lg:h-screen">
+          <div className="md:flex md:px-20 md:w-full md:justify-between lg:px-[134px] lg:mt-10">
+            <div className="px-5 md:px-0 md:w-[45%] lg:pe-10 ">
+              <SectionHeader content={["Tentang", "Produk"]} />
+              <TextParagraph customClassname="text-justify lg:mt-8">
                 SwanBag adalah sebuah produk tas eco-bag yang ramah lingkungan
                 yang dirancang khusus untuk mengurangi penggunaan kantong
                 plastik. Terbuat dari bahan polyester ramah lingkungan dan
@@ -30,11 +30,11 @@ const Product = () => {
                 warisan budaya lokal.
               </TextParagraph>
             </div>
-            <div className="p-9 md:p-0 md:w-[45%]">
+            <div className="p-9 md:p-0 md:w-[45%] size1024:flex size1024:justify-start">
               <img
                 src="images/product-image-bag-1.png"
                 alt="Image Bag"
-                className="w-full"
+                className="w-full size1024:w-[360px] lg:w-[460px]"
               />
             </div>
           </div>
@@ -51,27 +51,31 @@ const Product = () => {
         </section>
 
         {/* SECTION 2 : KELEBIHAN */}
-        <section className="pb-4">
-          <div className="px-5 mt-5">
-            <SectionHeader content={["KELEBIHAN", "PRODUK"]} />
-            <TextParagraph customClassname="text-justify ">
+        <section className="pb-4 lg:py-5">
+          <div className="px-5 mt-5 md:px-20 md:flex md:flex-col md:items-center md:mt-8 lg:px-[134px] lg:mt-6">
+            <SectionHeader content={["Kelebihan", "Produk"]} />
+            <TextParagraph customClassname="text-justify md:text-center lg:mt-5 lg:px-48">
               SwanBag kini hadir dengan inovasi baru, memungkinkan tas ini
               dilipat menjadi mini pouch yang fleksibel dan praktis. Ini
               memudahkan Anda untuk menyimpannya di tas atau saku dan membawanya
               ke mana saja tanpa repot
             </TextParagraph>
           </div>
-          <div className="px-5 mt-3">
+          <div className="px-5 mt-3 size1024:flex size1024:px-8 size1024:mt-8 lg:mt-10 lg:justify-center lg:px-20">
             {productsAdvantages.map((item) => (
               <div
                 key={item.id}
-                className="flex flex-col items-center justify-center px-5 py-5"
+                className="flex flex-col items-center justify-center px-5 py-5 "
               >
-                <img src={item.image} alt={item.title} />
-                <h1 className="font-bold mt-3 text-center text-[14px]">
+                <img
+                  src={item.image}
+                  alt={item.title}
+                  className="size1024:w-16"
+                />
+                <h1 className="font-bold mt-3 text-center text-[14px] size1024:text-[17px] lg:mb-1 lg:mt-5">
                   {item.title}
                 </h1>
-                <TextParagraph customClassname="text-center px-4">
+                <TextParagraph customClassname="text-center px-4 md:px-28 size1024:px-0 lg:text-[18px] lg:h-[80px] w-full">
                   {item.description}
                 </TextParagraph>
               </div>
@@ -91,26 +95,37 @@ const Product = () => {
             alt="bg pink"
             className="absolute hidden w-full top-0 -z-10 md:block"
           />
-          <div className="px-5 pb-6">
+          <div className="px-5 pb-6 md:px-20 md:my-4 lg:px-[134px] lg:pb-16">
             <div className="py-7">
-              <SectionHeader content={["SWANBAG", "PRODUK"]} />
+              <SectionHeader content={["Swanbag", "Produk"]} />
             </div>
             <Pagination data={products} CardComponent={CardProducts} />
           </div>
         </section>
+
         {/* SECTION 4 : TESTIMONI */}
-        <section className="bg-[#e645140a] pb-12">
-          <div className="px-5">
-            <div className="py-7 mb-4">
-              <SectionHeader content={["TESTIMONI", "PELANGGAN"]} />
-            </div>
+        <section className="bg-[#e645140a] pb-12 lg:px-[134px] lg:relative lg:bg-[#e6451400]">
+          <div className="px-5 py-7 mb-4 md:flex md:justify-center md:my-5 md:px-20">
+            <SectionHeader content={["Testimoni", "Pelanggan"]} />
           </div>
-          <Caraousel
-            data={testimoni}
-            srcLeftButtonPath="svg/arrow-left.svg"
-            srcRightButtonPath="svg/arrow-right.svg"
-            chooseFragment="testimoni"
+          <img
+            src="svg/stylize-frame-3.svg"
+            alt="styling"
+            className="absolute hidden lg:block top-52 right-0"
           />
+          <img
+            src="images/beranda-bg4.1.png"
+            alt="bg pink"
+            className="absolute hidden w-full top-0 left-0 -z-10 lg:block"
+          />
+          <div className="">
+            <Caraousel
+              data={testimoni}
+              srcLeftButtonPath="svg/arrow-left.svg"
+              srcRightButtonPath="svg/arrow-right.svg"
+              chooseFragment="testimoni"
+            />
+          </div>
         </section>
 
         {/* FOOTER */}
