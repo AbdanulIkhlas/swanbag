@@ -126,7 +126,7 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <section className="pb-8 md:pb-60 border border-black">
+      <section className="pb-8 md:pb-60">
         <div className="px-5 pt-8 md:pt-[130px] md:pl-[135px] md:flex md:flex-row">
           <div className="md:w-[437px]">
             <SectionHeader content={["Tim ", "Kami"]} />
