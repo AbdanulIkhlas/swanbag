@@ -57,13 +57,17 @@ const Caraousel = ({
           ))}
         </div>
       </div>
-      <div className="absolute w-[60%] pl-1 bottom-0 right-0 z-20 h-[22px] rounded-md">
+      <div
+        className="absolute w-[60%] pl-1 bottom-0 right-0 z-20 h-[22px] rounded-md size1024:h-[55px] size1024:pl-0 lg:pl-6
+      lg:h-[70px]"
+      >
         {/* Left Button */}
         <button className="" onClick={slideLeft} disabled={isTransitioning}>
           <img
             src={srcLeftButtonPath}
             alt="Previous"
-            className="w-[22px] h-[22px] p-[5px] bg-[#FEC947] drop-shadow-sm shadow-customShadow rounded-l-md"
+            className="w-[22px] h-[22px] p-[5px] bg-[#FEC947] drop-shadow-sm shadow-customShadow rounded-l-md md:w-[26px] md:h-[26px] 
+            lg:w-[34px] lg:h-[34px] lg:px-[12px]"
           />
         </button>
         {/* Right Button */}
@@ -71,7 +75,8 @@ const Caraousel = ({
           <img
             src={srcRightButtonPath}
             alt="Next"
-            className="w-[22px] h-[22px] p-[5px] bg-white drop-shadow-sm shadow-customShadow rounded-r-md"
+            className="w-[22px] h-[22px] p-[5px] bg-white drop-shadow-sm shadow-customShadow rounded-r-md md:w-[26px] md:h-[26px] 
+            lg:w-[34px] lg:h-[34px] lg:px-[12px]"
           />
         </button>
       </div>
