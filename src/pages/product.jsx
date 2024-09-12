@@ -3,6 +3,9 @@ import Navbar from "../components/Fragments/Navbar";
 import SectionHeader from "../components/Elements/SectionHeader";
 import TextParagraph from "../components/Elements/TextParagraph";
 import { productsAdvantages } from "../utils/productsAdvantages";
+import products from "../utils/products";
+import CardProducts from "../components/Fragments/CardProducts";
+import Pagination from "../components/Fragments/Pagination";
 
 const Product = () => {
   return (
@@ -72,9 +75,23 @@ const Product = () => {
             ))}
           </div>
         </section>
+
         {/* SECTION 3 : SWANBAG PRODUK */}
-        <section className="">
-          <h1>Section 1</h1>
+        <section className="relative border border-black">
+          <img
+            src="images/beranda-bg4.png"
+            alt="bg pink"
+            className="absolute w-full top-0 -z-10 md:hidden"
+          />
+          <img
+            src="images/beranda-bg4.1.png"
+            alt="bg pink"
+            className="absolute hidden w-full top-0 -z-10 md:block"
+          />
+          <div className="px-5 pb-6">
+            <div className="py-7"><SectionHeader content={["SWANBAG", "PRODUK"]} /></div>
+            <Pagination data={products} CardComponent={CardProducts} />
+          </div>
         </section>
         {/* SECTION 4 : TESTIMONI */}
         <section>
