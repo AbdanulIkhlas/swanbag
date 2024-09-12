@@ -80,7 +80,7 @@ const Product = () => {
         </section>
 
         {/* SECTION 3 : SWANBAG PRODUK */}
-        <section className="relative">
+        <section className="relative" >
           <img
             src="images/beranda-bg4.png"
             alt="bg pink"
@@ -91,8 +91,8 @@ const Product = () => {
             alt="bg pink"
             className="absolute hidden w-full top-0 -z-10 md:block"
           />
-          <div className="px-5 pb-6">
-            <div className="py-7">
+          <div className="px-5 pb-6 ">
+            <div className="py-7 " id="swanbag-produk">
               <SectionHeader content={["SWANBAG", "PRODUK"]} />
             </div>
             <Pagination data={products} CardComponent={CardProducts} />
