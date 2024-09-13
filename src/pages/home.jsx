@@ -138,7 +138,7 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <section className="pb-8">
+      <section className="pb-8 md:pb-60">
         <div className="px-5 pt-8 md:pt-[130px] md:pl-[135px] md:flex md:flex-row">
           <div className="md:w-[437px]">
             <SectionHeader content={["Tim ", "Kami"]} />
@@ -157,18 +157,28 @@ const Home = () => {
         </div>
       </section>
       {/* SECTION 4 : TESTIMONI */}
-      <section className="bg-[#e645140a] pb-12">
-        <div className="px-5">
-          <div className="py-7 mb-4">
-            <SectionHeader content={["TESTIMONI", "PELANGGAN"]} />
-          </div>
+      <section className="bg-[#e645140a] pb-12 lg:px-[134px] lg:relative lg:bg-[#e6451400]">
+        <div className="px-5 py-7 mb-4 md:flex md:justify-center md:my-5 md:px-20">
+          <SectionHeader content={["Testimoni", "Pelanggan"]} />
         </div>
-        <Caraousel
-          data={testimoni}
-          srcLeftButtonPath="svg/arrow-left.svg"
-          srcRightButtonPath="svg/arrow-right.svg"
-          chooseFragment="testimoni"
+        <img
+          src="svg/stylize-frame-3.svg"
+          alt="styling"
+          className="absolute hidden lg:block top-52 right-0"
         />
+        <img
+          src="images/beranda-bg4.1.png"
+          alt="bg pink"
+          className="absolute hidden w-full top-0 left-0 -z-10 lg:block"
+        />
+        <div className="">
+          <Caraousel
+            data={testimoni}
+            srcLeftButtonPath="svg/arrow-left.svg"
+            srcRightButtonPath="svg/arrow-right.svg"
+            chooseFragment="testimoni"
+          />
+        </div>
       </section>
       <Footer />
     </div>

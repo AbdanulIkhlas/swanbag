@@ -18,11 +18,12 @@ export default {
       screens: {
         sm: "360px",
         md: "768px",
+        size1024: "1024px",
         lg: "1440px",
       },
       borderRadius: {
-        large: "52px",
-        large2: "62px",
+        large: "53px",
+        large2: "66px",
         extraLarge: "82px",
       },
       boxShadow: {

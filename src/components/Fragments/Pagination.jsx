@@ -39,7 +39,7 @@ const Pagination = ({ data, CardComponent }) => {
       </div>
 
       {/* Pagination */}
-      <div className="flex rounded-lg shadow-customShadow border border-gray-100">
+      <div className="flex rounded-md shadow-customShadow border border-gray-100 lg:mt-2">
         {Array.from({ length: totalPages }, (_, i) => i + 1).map(
           (pageNumber, index) => (
             <button
@@ -51,10 +51,10 @@ const Pagination = ({ data, CardComponent }) => {
                   : "bg-white text-yellow-500"
               } transition duration-500 ease-in-out 
                 ${
-                  index === 0 ? "rounded-l-lg px-[14px]" : ""
+                  index === 0 ? "rounded-l-md px-[14px]" : ""
                 }  // Border-radius untuk tombol pertama
                 ${
-                  index === totalPages - 1 ? "rounded-r-lg" : ""
+                  index === totalPages - 1 ? "rounded-r-md" : ""
                 }  // Border-radius untuk tombol terakhir
               `}
             >

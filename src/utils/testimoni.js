@@ -21,7 +21,7 @@ export const testimoni = [
       "Bagus, bisa jadi Tas fashion juga dan bisa dipakai buat ke sekolah, pokoknya Tas Swanbag keren banget!!",
   },
   {
-    id: 2,
+    id: 4,
     name: "Ilham (Mahasiswa)",
     image: "images/testimoni/testimoni-image-4.png",
     description:
