@@ -84,7 +84,7 @@ const Product = () => {
         </section>
 
         {/* SECTION 3 : SWANBAG PRODUK */}
-        <section className="relative">
+        <section className="relative" >
           <img
             src="images/beranda-bg4.png"
             alt="bg pink"

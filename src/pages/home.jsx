@@ -6,6 +6,7 @@ import products from "../utils/products";
 import Footer from "../components/Fragments/Footer";
 import { testimoni } from "../utils/testimoni";
 import Caraousel from "../components/Fragments/Caraousel";
+import { Link } from "react-router-dom";
 
 const images = [
   { id: 1, src: "images/teams/team-1.png", alt: "Image 1" },
@@ -20,21 +21,32 @@ const Home = () => {
       <Navbar></Navbar>
       <section className="relative flex flex-col justify-center items-center mt-14 md:0 overflow-hidden md:flex-row md:justify-between md:pl-[134px]">
         <div className="flex flex-col justify-center items-center md:w-[567px] ">
-          <h1 className="font-bold text-2xl text-center mx-14 md:text-[58px] md:mx-0 md:leading-snug md:text-left text-shadow">
+          <h1 className=" font-bold text-2xl text-center mx-12 md:text-[58px] md:mx-0 md:leading-snug md:text-left text-shadow">
             IT’S <span className="text-primary">TIME</span> TO TAKE{" "}
-            <span className="text-primary">CARE</span> OF THE EARTH
+            <span className="text-primary">CARE</span> OF THE{" "}
+            <span className="inline-flex flex-col items-center max-w-min">
+              <span>EARTH</span>
+              <img src="svg/header-line2.svg" alt="" />
+            </span>
           </h1>
           <p className="text-xs text-center mx-5 px-5 mb-7 md:mb-24 mt-5 md:text-xl md:text-left md:px-0 md:mx-0 md:pr-20 md:leading-relaxed">
             Di desain dengan bahan yang ramah lingkungan yang bertujuan sebagai
             alternatif pengganti kantong plastik dan Tas Fashion
           </p>
           <div className="flex flex-col md:flex-row justify-center md:justify-start items-center gap-2.5 w-[127px] md:w-full ">
-            <button className="btn bg-primary mt-5 md:mt-0 text-xs md:text-lg py-3 md:py-4 px-6 md:px-10 text-white font-bold rounded-[10px] md:rounded-[15px]">
+            <a
+              href="https://id.shp.ee/BEfJANp"
+              target="_blank"
+              className="btn bg-primary mt-5 md:mt-0 text-xs md:text-lg py-3 md:py-4 px-6 md:px-10 text-white font-bold rounded-[10px] md:rounded-[15px]"
+            >
               Beli Produk
-            </button>
-            <button className="btn bg-white text-xs md:text-lg py-3 md:py-4 px-6 md:px-10 text-black font-bold rounded-[10px] md:rounded-[15px] border-[1px] border-primary">
-              Beli Produk
-            </button>
+            </a>
+            <Link
+              to="/product#swanbag-produk"
+              className="btn bg-white text-xs md:text-lg py-3 md:py-4 px-6 md:px-10 text-black font-bold rounded-[10px] md:rounded-[15px] border-[1px] border-primary"
+            >
+              Produk
+            </Link>
           </div>
         </div>
         <div>
@@ -116,7 +128,7 @@ const Home = () => {
           <SectionHeader content={["Swanbag ", "Produk"]} />
           <div className="flex flex-col justify-center items-center mt-7">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-5">
-              {products.map((product) => (
+              {products.slice(0, 4).map((product) => (
                 <CardProducts key={product.id} data={product} />
               ))}
             </div>
