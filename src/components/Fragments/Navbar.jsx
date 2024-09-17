@@ -34,7 +34,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="top-0 relative">
+      <nav className="top-0 relative font-poppins">
         <div className="flex pt-8 md:px-[82px] justify-between items-center lg:px-[134px] w-full ">
           <div className="flex flex-row items-center">
             <IoMenuOutline
@@ -73,7 +73,6 @@ const Navbar = () => {
               <MdOutlineShoppingCart className=" md:h-6 md:w-6 sm:hidden md:block mt-4" />
             </a>
           </div>
-          
         </div>
         {isMenuOpen && (
           <div className="fixed inset-0 z-40" onClick={toggleMenu}></div>
