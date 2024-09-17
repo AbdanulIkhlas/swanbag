@@ -12,9 +12,9 @@ import Footer from "../components/Fragments/Footer";
 
 const Product = () => {
   return (
-    <>
+    <div className="flex flex-col font-poppins min-h-screen">
       <Navbar></Navbar>
-      <div className="flex flex-col font-poppins min-h-screen">
+      <main className="">
         {/* SECTION 1 : TENTANG PRODUK */}
         <section className="relative flex flex-col mt-[50px] md:mt-[70px] md:h-[300px] size1024:h-[400px] lg:h-screen">
           <div className="md:flex md:px-20 md:w-full md:justify-between lg:px-[134px] lg:mt-10">
@@ -84,7 +84,7 @@ const Product = () => {
         </section>
 
         {/* SECTION 3 : SWANBAG PRODUK */}
-        <section className="relative" >
+        <section className="relative">
           <img
             src="images/beranda-bg4.png"
             alt="bg pink"
@@ -130,8 +130,8 @@ const Product = () => {
 
         {/* FOOTER */}
         <Footer />
-      </div>
-    </>
+      </main>
+    </div>
   );
 };
 
