@@ -132,9 +132,11 @@ const Home = () => {
                 <CardProducts key={product.id} data={product} />
               ))}
             </div>
-            <button className="btn bg-white text-xs md:text-base py-2 md:py-3 px-4 md:px-10 mt-9 text-primary font-bold rounded-[10px] md:rounded-[15px] border-[1px] border-primary">
-              Lihat Selengkapnya
-            </button>
+            <Link to="/product#swanbag-produk">
+              <button className="btn bg-white text-xs md:text-base py-2 md:py-3 px-4 md:px-10 mt-9 text-primary font-bold rounded-[10px] md:rounded-[15px] border-[1px] border-primary">
+                Lihat Selengkapnya
+              </button>
+            </Link>
           </div>
         </div>
       </section>
